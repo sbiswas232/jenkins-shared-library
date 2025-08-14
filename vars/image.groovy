@@ -1,6 +1,5 @@
 def call (String ImageName, String ImageTag, String DockerhubUser) {
-  sh"""
-  docker ps
+  sh'''
   docker build -t "${DockerhubUser}"/"${ImageName}":"${ImageTag}" .
-  """
+  '''
 }
